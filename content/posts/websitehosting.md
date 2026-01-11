@@ -1,16 +1,14 @@
 ---
-title: "Free Website Hosting"
+title: "Website Hosting using Render"
 date: 2026-01-11
 draft: false
 ---
 
-## Why I Chose Render for Website Hosting
-
-### What
+### What:
 
 - Render https://www.render.com is a good choice for hosting static sites like this one.
 
-### The Free Hobby Plan
+#### The Free Hobby Plan:
 
 The Hobby plan is free ($0/month) and includes several useful features:
 
@@ -19,7 +17,7 @@ The Hobby plan is free ($0/month) and includes several useful features:
 - **Automatic SSL:** Secure by default.
 - **Continuous deployment:** Updates automatically on each GitHub push.
 
-### How to get started
+### How to get started:
 
 1. Create a GitHub repository and push your Hugo project.
 2. Create a new Static Site on Render and connect the repository.
