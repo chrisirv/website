@@ -1,0 +1,14 @@
+baseURL = 'https://deft.technology'
+languageCode = 'en-us'
+title = 'Deft Technology'
+theme = 'PaperMod'
+
+[params]
+    env = 'production'
+    description = 'Documenting low-cost SaaS and Cloud setups'
+    showShareButtons = true
+    showCodeCopyButtons = true
+    
+    [params.homeInfoParams]
+        Title = "Deft Technology"
+        Content = "Welcome. I document my experiments with free and low-cost cloud technologies here."

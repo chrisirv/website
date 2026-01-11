@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Posts on Deft Technology</title>
+    <link>http://localhost:1313/posts/</link>
+    <description>Recent content in Posts on Deft Technology</description>
+    <generator>Hugo -- 0.154.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Website hosting</title>
+      <link>http://localhost:1313/posts/my-first-guide/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/my-first-guide/</guid>
+      <description>&lt;h2 id=&#34;why-i-chose-render&#34;&gt;Why I chose Render&lt;/h2&gt;
+&lt;p&gt;Render is a great low-cost option for hosting static sites like this one&amp;hellip;
+Prompt: &amp;ldquo;I have a local Hugo project ready. Act as a DevOps Engineer and guide me through pushing this to a new GitHub repository and deploying it to Render. Specifically, tell me the exact &amp;lsquo;Build Command&amp;rsquo; and &amp;lsquo;Publish Directory&amp;rsquo; required in the Render dashboard for a Hugo site to ensure the build doesn&amp;rsquo;t fail.&amp;rdquo;&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

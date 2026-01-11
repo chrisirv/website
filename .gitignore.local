@@ -1,0 +1,44 @@
+# Hugo build outputs
+public/
+resources/_gen/
+
+# Hugo caches and stats
+.hugo_build.lock
+hugo_stats.json
+
+# Node / package artifacts
+node_modules/
+npm-debug.log*
+yarn-error.log*
+dist/
+
+# macOS
+.DS_Store
+
+# Editor directories
+.vscode/
+.idea/
+
+# Logs, env, and temporary files
+*.log
+.env
+.env.local
+
+# Ruby / Bundler
+/vendor/bundle
+.bundle
+Gemfile.lock
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Misc
+Thumbs.db
+.cache/
+sass-cache/
+
+# Ignore generated theme assets if you build them locally
+# Uncomment if you generate CSS/JS into `assets` or `static` during CI
+# assets/css/*.css
+# static/assets/
