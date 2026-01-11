@@ -9,13 +9,16 @@
     <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Website hosting</title>
+      <title>Free Website Hosting</title>
       <link>http://localhost:1313/posts/my-first-guide/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/my-first-guide/</guid>
-      <description>&lt;h2 id=&#34;why-i-chose-render&#34;&gt;Why I chose Render&lt;/h2&gt;
-&lt;p&gt;Render is a great low-cost option for hosting static sites like this one&amp;hellip;
-Prompt: &amp;ldquo;I have a local Hugo project ready. Act as a DevOps Engineer and guide me through pushing this to a new GitHub repository and deploying it to Render. Specifically, tell me the exact &amp;lsquo;Build Command&amp;rsquo; and &amp;lsquo;Publish Directory&amp;rsquo; required in the Render dashboard for a Hugo site to ensure the build doesn&amp;rsquo;t fail.&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;why-i-chose-render-for-website-hosting&#34;&gt;Why I Chose Render for Website Hosting&lt;/h2&gt;
+&lt;p&gt;Render is good for hosting static sites like this one.&lt;/p&gt;
+&lt;p&gt;The &amp;ldquo;Free&amp;rdquo; Advantage: The Hobby Plan For hobbyists and students, the entry price is unbeatable: $0 USD/month. While many &amp;ldquo;free&amp;rdquo; tiers feel restrictive, Render’s Hobby plan provides professional-grade features:&lt;/p&gt;
+&lt;p&gt;Custom Domains: use your own brand for free.&lt;/p&gt;
+&lt;p&gt;Global CDN: Your site is fast everywhere, not just near the server.&lt;/p&gt;
+&lt;p&gt;Automatic SSL: Security is included out of the box.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

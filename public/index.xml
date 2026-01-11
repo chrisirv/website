@@ -9,13 +9,33 @@
     <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Website hosting</title>
+      <title>Free Website Hosting</title>
       <link>http://localhost:1313/posts/my-first-guide/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/my-first-guide/</guid>
-      <description>&lt;h2 id=&#34;why-i-chose-render&#34;&gt;Why I chose Render&lt;/h2&gt;
-&lt;p&gt;Render is a great low-cost option for hosting static sites like this one&amp;hellip;
-Prompt: &amp;ldquo;I have a local Hugo project ready. Act as a DevOps Engineer and guide me through pushing this to a new GitHub repository and deploying it to Render. Specifically, tell me the exact &amp;lsquo;Build Command&amp;rsquo; and &amp;lsquo;Publish Directory&amp;rsquo; required in the Render dashboard for a Hugo site to ensure the build doesn&amp;rsquo;t fail.&amp;rdquo;&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;why-i-chose-render-for-website-hosting&#34;&gt;Why I Chose Render for Website Hosting&lt;/h2&gt;
+&lt;h3 id=&#34;what&#34;&gt;What&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Render &lt;a href=&#34;https://www.render.com&#34;&gt;https://www.render.com&lt;/a&gt; is a good choice for hosting static sites like this one.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-free-hobby-plan&#34;&gt;The Free Hobby Plan&lt;/h3&gt;
+&lt;p&gt;The Hobby plan is free ($0/month) and includes several useful features:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Custom domains:&lt;/strong&gt; Use your own brand.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Global CDN:&lt;/strong&gt; Fast delivery worldwide.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automatic SSL:&lt;/strong&gt; Secure by default.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Continuous deployment:&lt;/strong&gt; Updates automatically on each GitHub push.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;how-to-get-started&#34;&gt;How to get started&lt;/h3&gt;
+&lt;ol&gt;
+&lt;li&gt;Create a GitHub repository and push your Hugo project.&lt;/li&gt;
+&lt;li&gt;Create a new Static Site on Render and connect the repository.&lt;/li&gt;
+&lt;li&gt;Set the &lt;strong&gt;Build Command&lt;/strong&gt; to &lt;code&gt;hugo&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Set the &lt;strong&gt;Publish Directory&lt;/strong&gt; to &lt;code&gt;public&lt;/code&gt;.&lt;/li&gt;
+&lt;li&gt;Add a custom domain if desired.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;prompt-used-to-get-started-on-google-gemini-copy-friendly&#34;&gt;Prompt used to get started on Google Gemini (copy-friendly):&lt;/h3&gt;
+&lt;p&gt;Compact one-line version (for scripts or quick paste):&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
