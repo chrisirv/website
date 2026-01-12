@@ -26,6 +26,4 @@ If you are stuck or want to customize your site further, you can use specific "D
 #### Prompt used to get started on Google Gemini (copy-friendly):
 
 ```text
-Act as a Senior Web Developer. I am building a website using Hugo. I want to create a professional landing page that support blog posts. Please provide:
-1. A recommended 'hugo.yaml' configuration.
-2. The exact terminal command to create a new blog post.
+Act as a Senior Web Developer. I am building a website using Hugo. I want to create a professional landing page that support blog posts. Please provide: 1. A recommended 'hugo.yaml' configuration. 2. The exact terminal command to create a new blog post.
