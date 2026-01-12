@@ -6,9 +6,9 @@ description: "Cloudflare offers free DNS and low cost domain name registration p
 tags: ["Cloudflare", "DNS", "Infrastructure", "Low cost"]
 ---
 
-### What is Cloudflare DNS?
+### What is Cloudflare?
 
-- [Cloudflare DNS](https://www.cloudflare.com/application-services/products/dns/) is an authoritative DNS service that offers fast response times (averaging ~11ms) and redundancy. It serves as the "brain" that tells the internet where your website, email, and automation tools live.
+- [Cloudflare](https://www.cloudflare.com/application-services/products/dns/) is an authoritative DNS service that offers fast response times (averaging ~11ms) and redundancy for free bundled with various basic security protections for your site and being API first is good for automation.
 
 #### The Free Plan:
 
@@ -22,10 +22,7 @@ The Free plan is **$0/month** and includes everything a hobbyist or tester needs
 
 ### Understanding Domain Registration Costs
 
-For any website, the only mandatory recurring cost is the **Domain Registration Fee**. In 2026, most registrars add a "markup" to this price to make a profit. Cloudflare Registrar is unique because they offer **at-cost pricing**—you pay exactly what the registry (like Verisign for .com) charges them.
-
-#### 2026 Estimated Annual Costs (At-Cost):
-~$8.00 for a typical .com.
+For any website, it is usually cheaper to move your domain and is the only mandatory recurring cost or the **Domain Registration Fee** of about $8.00 for a typical .com per year.
 
 *Note: Cloudflare also includes **WHOIS Privacy Protection** for free, which usually costs an extra $10-$15/year at other registrars.*
 
