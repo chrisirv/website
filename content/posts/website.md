@@ -3,12 +3,12 @@ title: "Web Design with Hugo"
 date: 2026-01-05
 draft: false
 description: "Hugo is a great free choice for simple high-performance websites."
-tags: ["Hugo", "Web Design", "Tutorial", "Free", "Gemini"]
+tags: ["Hugo", "Web Design", "Free"]
 ---
 
 ### What is Hugo?
 
-[Hugo](https://gohugo.io) is the world’s fastest static site generator. Unlike WordPress, which builds pages every time a visitor clicks a link, Hugo builds your entire website **once** into simple HTML files. This makes your site incredibly fast and nearly impossible to hack.
+[Hugo](https://gohugo.io) is a fast static site generator. Unlike WordPress, which builds pages every time a visitor clicks a link, Hugo builds your entire website **once** into simple HTML files. This makes your site incredibly fast and more difficult to hack.
 
 #### Why it’s a good choice:
 

@@ -3,7 +3,7 @@ title: "Website Hosting using Render"
 date: 2026-01-11
 draft: false
 description: "Render is a good free choice for website hosting."
-tags: ["Render", "Hosting", "Deployment", "Free", "Gemini"]
+tags: ["Render", "Hosting", "Deployment", "Free"]
 ---
 
 ### What:
@@ -29,8 +29,6 @@ The Hobby plan is free ($0/month) and includes several useful features:
 
 ### Prompt used to get started on Google Gemini (copy-friendly):
 
-Compact one-line version (for scripts or quick paste):
-
-```
+```text
 I have a local Hugo project ready. Act as a DevOps Engineer and guide me through pushing this to a new GitHub repository and deploying it to Render. Specifically, tell me the exact 'Build Command' and 'Publish Directory' required in the Render dashboard for a Hugo site to ensure the build doesn't fail.
 ```
