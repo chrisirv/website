@@ -6,7 +6,7 @@ description: "Render is a good free choice for website hosting."
 tags: ["Render", "Hosting", "Deployment", "Free"]
 ---
 
-### What:
+### What is Render?
 
 - Render https://www.render.com is a good choice for hosting static sites like this one.
 

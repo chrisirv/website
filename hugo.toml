@@ -5,14 +5,18 @@ theme = 'PaperMod'
 
 [params]
     env = 'production'
-    description = 'Documenting automation, low-cost SaaS and Cloud setups'
+    description = 'Expermimenting and documenting automation, low-cost SaaS and Cloud setups'
     showShareButtons = true
     showCodeCopyButtons = true
-    
-    [params.homeInfoParams]
-    Title = "Deft Technology"
-    Content = "Testing different automation, hosting, and other no to low-cost ways to implement technology."
 
+    # Move the social icons ABOVE the homeInfoParams or make sure they are clearly defined
     [[params.socialIcons]]
         name = "email"
         url = "mailto:support@deft.technology"
+
+[params.homeInfoParams]
+    Title = "Deft Technology"
+    # Using Markdown here makes it much more user friendly!
+    Content = """
+This site is the result of testing **automation**, **hosting**, and other **no to low-cost** ways to implement technology. 
+"""
