@@ -5,10 +5,14 @@ theme = 'PaperMod'
 
 [params]
     env = 'production'
-    description = 'Documenting low-cost SaaS and Cloud setups'
+    description = 'Documenting automation, low-cost SaaS and Cloud setups'
     showShareButtons = true
     showCodeCopyButtons = true
     
     [params.homeInfoParams]
-        Title = "Deft Technology"
-        Content = "Welcome. I document my experiments with free and low-cost cloud technologies here."
+    Title = "Deft Technology"
+    Content = "Testing different automation, hosting, and other no to low-cost ways to implement technology."
+
+    [[params.socialIcons]]
+        name = "email"
+        url = "mailto:support@deft.technology"
