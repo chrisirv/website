@@ -2,6 +2,8 @@
 title: "Website Hosting using Render"
 date: 2026-01-11
 draft: false
+description: "Render is a good free choice for website hosting."
+tags: ["Render", "Hosting", "Deployment", "Free", "Gemini"]
 ---
 
 ### What:
