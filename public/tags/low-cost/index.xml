@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Low Cost on Deft Technology</title>
+    <link>https://deft.technology/tags/low-cost/</link>
+    <description>Recent content in Low Cost on Deft Technology</description>
+    <generator>Hugo -- 0.154.4</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="https://deft.technology/tags/low-cost/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DNS Hosting using Cloudflare</title>
+      <link>https://deft.technology/posts/dns/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://deft.technology/posts/dns/</guid>
+      <description>Cloudflare offers free DNS and low cost domain name registration providing a rock-solid foundation for automation.</description>
+    </item>
+  </channel>
+</rss>

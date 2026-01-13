@@ -9,6 +9,13 @@
     <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://deft.technology/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>DNS Hosting using Cloudflare</title>
+      <link>https://deft.technology/posts/dns/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://deft.technology/posts/dns/</guid>
+      <description>Cloudflare offers free DNS and low cost domain name registration providing a rock-solid foundation for automation.</description>
+    </item>
+    <item>
       <title>Website Hosting using Render</title>
       <link>https://deft.technology/posts/websitehosting/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>

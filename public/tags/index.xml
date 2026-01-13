@@ -9,10 +9,24 @@
     <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="https://deft.technology/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Cloudflare</title>
+      <link>https://deft.technology/tags/cloudflare/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://deft.technology/tags/cloudflare/</guid>
+      <description></description>
+    </item>
+    <item>
       <title>Deployment</title>
       <link>https://deft.technology/tags/deployment/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://deft.technology/tags/deployment/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>DNS</title>
+      <link>https://deft.technology/tags/dns/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://deft.technology/tags/dns/</guid>
       <description></description>
     </item>
     <item>
@@ -27,6 +41,20 @@
       <link>https://deft.technology/tags/hosting/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
       <guid>https://deft.technology/tags/hosting/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Infrastructure</title>
+      <link>https://deft.technology/tags/infrastructure/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://deft.technology/tags/infrastructure/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Low Cost</title>
+      <link>https://deft.technology/tags/low-cost/</link>
+      <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>https://deft.technology/tags/low-cost/</guid>
       <description></description>
     </item>
     <item>
