@@ -2,54 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://deft.technology/tags/cloudflare/</loc>
+    <loc>http://localhost:1313/tags/cloudflare/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/deployment/</loc>
+    <loc>http://localhost:1313/tags/deployment/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/dns/</loc>
+    <loc>http://localhost:1313/tags/dns/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/posts/dns/</loc>
+    <loc>http://localhost:1313/posts/dns/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/free/</loc>
+    <loc>http://localhost:1313/tags/free/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/hosting/</loc>
+    <loc>http://localhost:1313/tags/hosting/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/infrastructure/</loc>
+    <loc>http://localhost:1313/tags/infrastructure/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/low-cost/</loc>
+    <loc>http://localhost:1313/tags/low-cost/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/posts/</loc>
+    <loc>http://localhost:1313/posts/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/render/</loc>
+    <loc>http://localhost:1313/tags/render/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/posts/websitehosting/</loc>
+    <loc>http://localhost:1313/posts/websitehosting/</loc>
     <lastmod>2026-01-11T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/hugo/</loc>
+    <loc>http://localhost:1313/tags/hugo/</loc>
     <lastmod>2026-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/tags/web-design/</loc>
+    <loc>http://localhost:1313/tags/web-design/</loc>
     <lastmod>2026-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/posts/website/</loc>
+    <loc>http://localhost:1313/posts/website/</loc>
     <lastmod>2026-01-05T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://deft.technology/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url>
 </urlset>

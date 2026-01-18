@@ -27,6 +27,10 @@ The Hobby plan is free ($0/month) and includes several useful features:
 4. Set the **Publish Directory** to `public`.
 5. Add a custom domain if desired.
 
+
+![render screen](images/render.png)
+
+
 ### Prompt used to get started on Google Gemini (copy-friendly):
 
 ```text

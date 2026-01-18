@@ -5,7 +5,7 @@ theme = 'PaperMod'
 
 [params]
     env = 'production'
-    description = 'Expermimenting and documenting automation, low-cost SaaS and Cloud setups'
+    description = 'Practical experiments in low-cost internet infrastructure. My goal is simple: identify tools that are fun to learn at home but powerful enough to solve real-world corporate challenges. No fluff, just functional tech.'
     showShareButtons = true
     showCodeCopyButtons = true
 
@@ -18,5 +18,5 @@ theme = 'PaperMod'
     Title = "Deft Technology"
     # Using Markdown here makes it much more user friendly!
     Content = """
-This site is the result of testing **automation**, **hosting**, and other **no to low-cost** ways to implement technology. 
+Practical experiments in low-cost internet infrastructure. My goal is simple: identify tools that are fun to learn at home but powerful enough to solve real-world corporate challenges. No fluff, just functional tech.
 """

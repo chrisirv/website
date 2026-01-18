@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Render on Deft Technology</title>
-    <link>https://deft.technology/tags/render/</link>
+    <link>http://localhost:1313/tags/render/</link>
     <description>Recent content in Render on Deft Technology</description>
     <generator>Hugo -- 0.154.4</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="https://deft.technology/tags/render/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/render/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Website Hosting using Render</title>
-      <link>https://deft.technology/posts/websitehosting/</link>
+      <link>http://localhost:1313/posts/websitehosting/</link>
       <pubDate>Sun, 11 Jan 2026 00:00:00 +0000</pubDate>
-      <guid>https://deft.technology/posts/websitehosting/</guid>
+      <guid>http://localhost:1313/posts/websitehosting/</guid>
       <description>Render is a good free choice for website hosting.</description>
     </item>
   </channel>
