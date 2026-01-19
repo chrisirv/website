@@ -6,8 +6,18 @@
     <description>Recent content in Cloudflare on Deft Technology</description>
     <generator>Hugo -- 0.154.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 11 Jan 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 17 Jan 2026 19:57:07 -0500</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/cloudflare/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VPN for Your Network with Cloudflare</title>
+      <link>http://localhost:1313/posts/cloudflarevpn/</link>
+      <pubDate>Sat, 17 Jan 2026 19:57:07 -0500</pubDate>
+      <guid>http://localhost:1313/posts/cloudflarevpn/</guid>
+      <description>&lt;h2 id=&#34;overview&#34;&gt;Overview&lt;/h2&gt;
+&lt;p&gt;[Cloudflare] (&lt;a href=&#34;https://www.cloudflare.com/zero-trust/products/access/&#34;&gt;https://www.cloudflare.com/zero-trust/products/access/&lt;/a&gt;) offers a powerful solution for connecting your devices across different networks. This free service allows you to securely link your home office setup, remote cloud images, and laptop through Cloudflare&amp;rsquo;s global network without exposing your infrastructure to the public internet.&lt;/p&gt;
+&lt;h2 id=&#34;what-is-cloudflare-tunnel&#34;&gt;What is Cloudflare Tunnel?&lt;/h2&gt;
+&lt;p&gt;Cloudflare Tunnel is a service that creates secure, outbound-only connections from your devices to Cloudflare&amp;rsquo;s edge network. Unlike traditional VPNs, you don&amp;rsquo;t need to open ports on your firewall or manage complex routing—the tunnel handles all the connectivity for you.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>DNS Hosting using Cloudflare</title>
       <link>http://localhost:1313/posts/dns/</link>

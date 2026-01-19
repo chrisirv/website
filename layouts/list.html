@@ -1,0 +1,32 @@
+{{- define "main" -}}
+
+{{- if (and .IsHome .Site.Params.homeInfoParams (not .Paginator.HasPrev)) -}}
+    {{- partial "home_info.html" . -}}
+{{- end -}}
+
+{{- if .Content -}}
+<div class="post-content">
+  {{- .Content -}}
+</div>
+{{- end -}}
+
+{{- $pages := union .RegularPages .Sections -}}
+{{- if .IsHome -}}
+    {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections -}}
+{{- end -}}
+
+{{- $paginator := .Paginate $pages -}}
+
+{{- range $paginator.Pages -}}
+<article class="post-entry">
+  <header class="entry-header">
+    <h2>{{- .Title -}}</h2>
+  </header>
+  <div class="entry-content">
+    <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+  </div>
+  <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+</article>
+{{- end -}}
+
+{{- end -}}

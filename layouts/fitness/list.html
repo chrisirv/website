@@ -1,0 +1,41 @@
+{{- define "main" -}}
+<header class="page-header">
+    <h1>{{ .Title }}</h1>
+</header>
+
+<div class="post-content">
+    {{ .Content }}
+
+    {{- if .Site.Data.strava_stats -}}
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 2rem; margin-bottom: 2rem;">
+        {{- with .Site.Data.strava_stats.ytd_run_totals -}}
+        <div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+            <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase;">🏃 YTD Run</div>
+            <div style="font-size: 1.5rem; font-weight: bold;">{{ div .distance 1609.34 | printf "%.1f" }} mi</div>
+        </div>
+        {{- end -}}
+        {{- with .Site.Data.strava_stats.ytd_ride_totals -}}
+        <div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
+            <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase;">🚲 YTD Ride</div>
+            <div style="font-size: 1.5rem; font-weight: bold;">{{ div .distance 1609.34 | printf "%.1f" }} mi</div>
+        </div>
+        {{- end -}}
+    </div>
+    {{- end -}}
+
+    {{- if .Site.Data.strava -}}
+    <div class="recent-activities">
+        <h3 style="margin-bottom: 1rem;">Recent Activities</h3>
+        {{- range .Site.Data.strava -}}
+        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border);">
+            <div>
+                <strong>{{ .name }}</strong>
+                <div style="font-size: 0.8rem; opacity: 0.6;">{{ time.Format "Jan 02, 2006" .start_date_local }}</div>
+            </div>
+            <div style="font-family: monospace;">{{ div .distance 1609.34 | printf "%.2f" }} mi</div>
+        </div>
+        {{- end -}}
+    </div>
+    {{- end -}}
+</div>
+{{- end -}}
