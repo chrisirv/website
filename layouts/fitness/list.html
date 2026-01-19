@@ -1,41 +1,126 @@
 {{- define "main" -}}
+
 <header class="page-header">
     <h1>{{ .Title }}</h1>
 </header>
 
 <div class="post-content">
-    {{ .Content }}
+    {{- .Content -}}
 
     {{- if .Site.Data.strava_stats -}}
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 2rem; margin-bottom: 2rem;">
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 2.5rem; margin-bottom: 2.5rem;">
+        
         {{- with .Site.Data.strava_stats.ytd_run_totals -}}
         <div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
-            <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase;">🏃 YTD Run</div>
-            <div style="font-size: 1.5rem; font-weight: bold;">{{ div .distance 1609.34 | printf "%.1f" }} mi</div>
+            <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em;">🏃 YTD Run</div>
+            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">{{ div .distance 1609.34 | printf "%.1f" }} mi</div>
         </div>
         {{- end -}}
+
         {{- with .Site.Data.strava_stats.ytd_ride_totals -}}
         <div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
-            <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase;">🚲 YTD Ride</div>
-            <div style="font-size: 1.5rem; font-weight: bold;">{{ div .distance 1609.34 | printf "%.1f" }} mi</div>
+            <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em;">🚲 YTD Ride</div>
+            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">{{ div .distance 1609.34 | printf "%.1f" }} mi</div>
         </div>
         {{- end -}}
+
     </div>
     {{- end -}}
 
     {{- if .Site.Data.strava -}}
     <div class="recent-activities">
-        <h3 style="margin-bottom: 1rem;">Recent Activities</h3>
-        {{- range .Site.Data.strava -}}
-        <div style="display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--border);">
-            <div>
-                <strong>{{ .name }}</strong>
-                <div style="font-size: 0.8rem; opacity: 0.6;">{{ time.Format "Jan 02, 2006" .start_date_local }}</div>
+        <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 10px;">Recent Activities</h3>
+        
+        {{- range first 10 .Site.Data.strava -}}
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
+            
+            <div style="flex-grow: 1;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2rem;">
+                        {{- if eq .type "Run" -}}🏃
+                        {{- else if eq .type "Ride" -}}🚲
+                        {{- else if eq .type "Walk" -}}🥾
+                        {{- else -}}🏋️
+                        {{- end -}}
+                    </span>
+                    <strong style="font-size: 1.1rem;">{{ .name | default "Activity" }}</strong>
+                </div>
+            
+                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">
+                    {{- if .start_date_local -}}
+                        {{- time.Format "Mon, Jan 02" .start_date_local -}}
+                    {{- end -}}
+                    • {{ .type }}
+                    {{- if .moving_time -}}
+                        • {{ $total_mins := div .moving_time 60.0 }}
+                        {{- if ge $total_mins 60 -}}
+                            {{- $hrs := math.Floor (div $total_mins 60) -}}
+                            {{- $mins := mod (math.Round $total_mins) 60 -}}
+                            {{ $hrs }}h {{ $mins }}m
+                        {{- else -}}
+                            {{ math.Round $total_mins }}m
+                        {{- end -}}
+                    {{- end -}}
+                </div>
+
             </div>
-            <div style="font-family: monospace;">{{ div .distance 1609.34 | printf "%.2f" }} mi</div>
+
+            <div style="text-align: right;">
+                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">
+                    {{- if .distance -}}
+                        {{ div .distance 1609.34 | printf "%.2f" }} mi
+                    {{- else -}}
+                        --
+                    {{- end -}}
+                </div>
+                {{- if .total_elevation_gain -}}
+                <div style="font-size: 0.75rem; opacity: 0.6;">
+                    ▲ {{ mul .total_elevation_gain 3.28084 | printf "%.0f" }} ft
+                </div>
+                {{- end -}}
+            </div>
         </div>
         {{- end -}}
     </div>
     {{- end -}}
+
 </div>
+
+<hr style="margin: 4rem 0 2rem 0; opacity: 0.2;">
+
+<section class="ai-prompt-share" style="background: var(--tertiary); padding: 25px; border-radius: 12px; border: 1px dashed var(--border);">
+    <h3 style="margin-top: 0;">🚀 Want this dashboard on your site?</h3>
+    <p style="font-size: 0.9rem; opacity: 0.8;">I built this using an AI-assisted workflow. Copy the prompt below and paste it into Gemini or ChatGPT to recreate this setup for your own Hugo site.</p>
+    
+    <div style="position: relative; background: var(--code-bg); padding: 15px; border-radius: 8px; margin-top: 15px; border: 1px solid var(--border);">
+        <pre style="margin: 0; white-space: pre-wrap; font-size: 0.85rem; line-height: 1.5; color: var(--primary);"><code id="ai-prompt">**The "Strava-to-Hugo Dashboard" Architect Prompt**
+
+**Role:** Expert Web Developer & Hugo Specialist
+**Task:** Build an automated fitness dashboard for a Hugo static site that pulls data from the Strava API.
+
+**The setup must include three components:**
+
+**1. Data Fetching (Python Script):**
+Create a `fetch_strava.py` script that uses a `STRAVA_REFRESH_TOKEN`, `STRAVA_CLIENT_ID`, and `STRAVA_CLIENT_SECRET`. Fetch the latest 30 activities and YTD totals. Save to `data/strava.json` and `data/strava_stats.json`.
+
+**2. Automation (GitHub Actions):**
+Create `.github/workflows/update_strava.yml` to run every 6 hours. Setup Python, install requests, run the script, and commit/push JSON changes back to the repo (requires Read/Write permissions).
+
+**3. Frontend (Hugo Template):**
+Create `layouts/fitness/list.html`. 
+- Convert meters to miles (div .distance 1609.34).
+- Format `moving_time` using `math.Floor` and `math.Round` to avoid decimals.
+- Convert elevation to feet (mul 3.28084).
+- Use icons (🏃, 🚲, 🥾) and `printf` for consistent mileage formatting.
+
+**4. Authorization:**
+Explain the OAuth process to get a refresh token with `scope=read,activity:read_all` via `curl`.</code></pre>
+    </div>
+    
+    <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.6;">
+        💡 <strong>Tip:</strong> Ensure GitHub Actions has "Read and write permissions" under <em>Settings > Actions > General</em>.
+    </p>
+</section>
+
+
 {{- end -}}
