@@ -1,5 +1,5 @@
 ---
-title: "Strava Dashboard"
+title: "Strava API Dashboard"
 date: 2026-01-18
 type: "fitness"
 layout: "list"

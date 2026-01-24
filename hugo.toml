@@ -30,6 +30,6 @@ Practical experiments in low-cost internet infrastructure. I explore tools that 
     weight = 10
 
 [[menu.main]]
-    name = "Fitness"
+    name = "Strava API"
     url = "/fitness/"
     weight = 20
