@@ -19,11 +19,11 @@
 &lt;p&gt;Cloudflare Tunnel is a service that creates secure, outbound-only connections from your devices to Cloudflare&amp;rsquo;s edge network. Unlike traditional VPNs, you don&amp;rsquo;t need to open ports on your firewall or manage complex routing—the tunnel handles all the connectivity for you.&lt;/p&gt;</description>
     </item>
     <item>
-      <title>Strava Dashboard</title>
+      <title>Strava API Dashboard</title>
       <link>http://localhost:1313/fitness/</link>
       <pubDate>Sun, 18 Jan 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/fitness/</guid>
-      <description>&lt;p&gt;This dashboard is an example tracker of training progress via Hugo, GitHub, Render and the Strava API.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This page pulls data directly from the &lt;!-- raw HTML omitted --&gt;Strava API&lt;!-- raw HTML omitted --&gt;.  Every few hours, a &lt;!-- raw HTML omitted --&gt;GitHub Action&lt;!-- raw HTML omitted --&gt; wakes up, grabs any updates, and saves them to a data file. &lt;!-- raw HTML omitted --&gt;Hugo&lt;!-- raw HTML omitted --&gt; then does any converting and using &lt;!-- raw HTML omitted --&gt;Leaflet.js&lt;!-- raw HTML omitted --&gt; plots my last starting point on a map.&lt;/p&gt;</description>
     </item>
     <item>
       <title>DNS Hosting using Cloudflare</title>

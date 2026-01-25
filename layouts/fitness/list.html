@@ -28,6 +28,40 @@
     {{- end -}}
 
     {{- if .Site.Data.strava -}}
+        {{- $latest := index .Site.Data.strava 0 -}}
+        {{- if and $latest.start_latlng (ne (len $latest.start_latlng) 0) -}}
+    
+        <h3 style="margin-bottom: 1rem;">📍 Last Starting Location</h3>
+        <div id="map" style="height: 300px; border-radius: 12px; margin-bottom: 2.5rem; border: 1px solid var(--border); z-index: 1;"></div>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                // Pulling coordinates from Hugo data
+                const lat = {{ index $latest.start_latlng 0 }};
+                const lng = {{ index $latest.start_latlng 1 }};
+                const activityName = {{ $latest.name }};
+
+                // Initialize map
+                const map = L.map('map').setView([lat, lng], 7);
+
+                // Add OpenStreetMap tiles
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                // Add marker
+                L.marker([lat, lng]).addTo(map)
+                    .bindPopup(`<b>Last Activity:</b><br>${activityName}`)
+                    .openPopup();
+            });
+        </script>
+        {{- end -}}
+    {{- end -}}
+
+    {{- if .Site.Data.strava -}}
     <div class="recent-activities">
         <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 10px;">Recent Activities</h3>
         
@@ -86,41 +120,17 @@
 
 </div>
 
-<hr style="margin: 4rem 0 2rem 0; opacity: 0.2;">
-
 <section class="ai-prompt-share" style="background: var(--tertiary); padding: 25px; border-radius: 12px; border: 1px dashed var(--border);">
-    <h3 style="margin-top: 0;">🚀 Want this dashboard on your site?</h3>
-    <p style="font-size: 0.9rem; opacity: 0.8;">I built this using an AI-assisted workflow. Copy the prompt below and paste it into Gemini or ChatGPT to recreate this setup for your own Hugo site.</p>
+    <h3 style="margin-top: 0;">Want this dashboard on your site?</h3>
+    <p style="font-size: 0.9rem; opacity: 0.8; margin-bottom: 15px;">Copy the prompt below and paste it into Gemini or ChatGPT to recreate this setup.</p>
     
-    <div style="position: relative; background: var(--code-bg); padding: 15px; border-radius: 8px; margin-top: 15px; border: 1px solid var(--border);">
-        <pre style="margin: 0; white-space: pre-wrap; font-size: 0.85rem; line-height: 1.5; color: var(--primary);"><code id="ai-prompt">**The "Strava-to-Hugo Dashboard" Architect Prompt**
-
-**Role:** Expert Web Developer & Hugo Specialist
-**Task:** Build an automated fitness dashboard for a Hugo static site that pulls data from the Strava API.
-
-**The setup must include three components:**
-
-**1. Data Fetching (Python Script):**
-Create a `fetch_strava.py` script that uses a `STRAVA_REFRESH_TOKEN`, `STRAVA_CLIENT_ID`, and `STRAVA_CLIENT_SECRET`. Fetch the latest 30 activities and YTD totals. Save to `data/strava.json` and `data/strava_stats.json`.
-
-**2. Automation (GitHub Actions):**
-Create `.github/workflows/update_strava.yml` to run every 6 hours. Setup Python, install requests, run the script, and commit/push JSON changes back to the repo (requires Read/Write permissions).
-
-**3. Frontend (Hugo Template):**
-Create `layouts/fitness/list.html`. 
-- Convert meters to miles (div .distance 1609.34).
-- Format `moving_time` using `math.Floor` and `math.Round` to avoid decimals.
-- Convert elevation to feet (mul 3.28084).
-- Use icons (🏃, 🚲, 🥾) and `printf` for consistent mileage formatting.
-
-**4. Authorization:**
-Explain the OAuth process to get a refresh token with `scope=read,activity:read_all` via `curl`.</code></pre>
+    <div style="background: var(--code-bg); padding: 15px; border-radius: 8px; border: 1px solid var(--border); overflow-x: auto;">
+        <pre style="margin: 0; white-space: nowrap; font-size: 0.85rem; color: var(--primary);"><code id="ai-prompt">I want to build an automated Strava dashboard for Hugo with a Python script, GitHub Actions, and a Leaflet.js map (zoom 9) showing my last location. Provide the script, workflow YAML, and HTML/JS with metric-to-imperial conversions.</code></pre>
     </div>
     
     <p style="font-size: 0.75rem; margin-top: 10px; opacity: 0.6;">
         💡 <strong>Tip:</strong> Ensure GitHub Actions has "Read and write permissions" under <em>Settings > Actions > General</em>.
     </p>
 </section>
-
 
 {{- end -}}
