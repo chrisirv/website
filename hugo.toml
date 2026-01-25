@@ -3,33 +3,49 @@ languageCode = 'en-us'
 title = 'Deft Technology'
 theme = 'PaperMod'
 
+# The new way to limit posts per page (Hugo v0.128.0+)
+[pagination]
+    pagerSize = 5
+
 [params]
     env = 'production'
-    description = 'No to Low-cost fun to learn tech.'
+    description = 'A digital sandbox for low-cost, high-impact tech experiments.'
     showShareButtons = true
     showCodeCopyButtons = true
+    
+    # PaperMod visual tweaks
+    ShowReadingTime = true
+    displayFullContent = false
     
     # This ensures ONLY posts in content/posts show on the home page list
     mainSections = ["posts"] 
 
-    # All Social Icons stay together under params
+    # Social Icons
     [[params.socialIcons]]
         name = "email"
         url = "mailto:support@deft.technology"
 
 [params.homeInfoParams]
-    Title = "Deft Technology"
+    Title = "Deft Technology 🛠️"
     Content = """
-Practical experiments in low-cost internet infrastructure. I explore tools that are fun to learn at home but powerful enough to solve real-world corporate challenges. No fluff, just functional tech.
+Welcome to my homelab on the web. This is where I tinker with free or low-cost tech that is fun to learn at home, but powerful enough to handle real-world challenges.
 """
+# Navigation Menu
 
-# Menus are separate from params
 [[menu.main]]
+    identifier = "home"
     name = "Home"
     url = "/"
     weight = 10
 
 [[menu.main]]
+    identifier = "strava"
     name = "Strava API"
     url = "/fitness/"
     weight = 20
+
+[[menu.main]]
+    identifier = "posts"
+    name = "Posts"
+    url = "/posts/"
+    weight = 30
