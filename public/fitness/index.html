@@ -190,7 +190,7 @@
 <div class="post-content"><p>This page pulls data directly from the <!-- raw HTML omitted -->Strava API<!-- raw HTML omitted -->.  Every few hours, a <!-- raw HTML omitted -->GitHub Action<!-- raw HTML omitted --> wakes up, grabs any updates, and saves them to a data file. <!-- raw HTML omitted -->Hugo<!-- raw HTML omitted --> then does any converting and using <!-- raw HTML omitted -->Leaflet.js<!-- raw HTML omitted --> plots my last starting point on a map.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 2.5rem; margin-bottom: 2.5rem;"><div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
             <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em;">🏃 YTD Run</div>
-            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">69.6 mi</div>
+            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">74.7 mi</div>
         </div><div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
             <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em;">🚲 YTD Ride</div>
             <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">26.2 mi</div>
@@ -203,9 +203,9 @@
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 
-                const lat =  42.446926 ;
-                const lng =  -83.492485 ;
-                const activityName = "3 out wore the gortex shoes";
+                const lat =  42.446892 ;
+                const lng =  -83.492561 ;
+                const activityName = "Snow run";
 
                 
                 const map = L.map('map').setView([lat, lng], 7);
@@ -222,6 +222,22 @@
             });
         </script><div class="recent-activities">
         <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 10px;">Recent Activities</h3><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
+            
+            <div style="flex-grow: 1;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2rem;">🏃</span>
+                    <strong style="font-size: 1.1rem;">Snow run</strong>
+                </div>
+            
+                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Sun, Jan 25• Run• 48m</div>
+
+            </div>
+
+            <div style="text-align: right;">
+                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">5.08 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
+                    ▲ 172 ft
+                </div></div>
+        </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
             
             <div style="flex-grow: 1;">
                 <div style="display: flex; align-items: center; gap: 10px;">
@@ -280,22 +296,6 @@
             <div style="text-align: right;">
                 <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">4.42 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
                     ▲ 262 ft
-                </div></div>
-        </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
-            
-            <div style="flex-grow: 1;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1.2rem;">🏃</span>
-                    <strong style="font-size: 1.1rem;">About zero out</strong>
-                </div>
-            
-                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Tue, Jan 20• Run• 42m</div>
-
-            </div>
-
-            <div style="text-align: right;">
-                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">4.43 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
-                    ▲ 261 ft
                 </div></div>
         </div></div></div>
 
