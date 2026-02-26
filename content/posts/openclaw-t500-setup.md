@@ -10,7 +10,7 @@ tags: ["Ollama", "OpenClaw", "NVIDIA", "Ubuntu", "Self-Hosted"]
 
 Running modern LLMs like **Phi-4** or **Qwen3** on local hardware is becoming a necessity as **cloud AI costs continue to add up** for power users. However, **OpenClaw 2026 now requires a large context window** (minimum 12k-16k) to handle its agentic workflows and tool-calling capabilities.
 
-On an entry-level **NVIDIA T500 (4GB)**, these large windows usually force the system to spill over into System RAM (CPU mode). When this happens, generation speed drops from near-instant to **minutes per response**, making the bot feel sluggish and unresponsive.
+On an entry-level **NVIDIA T500 (4GB)**, these large windows usually force the system to spill over into System RAM (CPU mode). When this happens, generation speed drops from sluggish to **5+ minutes per response**, making the bot unresponsive.
 
 #### The "Golden Fix": 4-Bit KV Caching
 
