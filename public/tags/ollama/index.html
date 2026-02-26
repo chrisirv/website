@@ -140,14 +140,24 @@
 </header>
 <main class="main"><article class="post-entry">
   <header class="entry-header">
-    <h2>Privacy-First AI: Running Llama 3.2 Locally with Ollama</h2>
+    <h2>Running OpenClaw 2026 on a 4GB Laptop GPU</h2>
   </header>
   <div class="entry-content">
-    <p>Why Run AI Locally? While cloud solutions like ChatGPT or Gemini offer massive horsepower, they require you to send your data to external servers. Running a local LLM (Large Language Model) provides:
-Data Sovereignty: Your prompts and data never leave your machine. Zero Cost: No monthly subscriptions or API usage fees. Offline Access: Work without an internet connection. Security: Ideal for analyzing sensitive documents or private codebases. Why the M1 Mac is a Powerhouse for AI: Apple Silicon uses Unified Memory, meaning the GPU and CPU share the same high-speed RAM. This allows even base-model M1 Macs to run 3B and 8B parameter models with impressive speed.
+    <p>The Challenge: The 4GB VRAM Wall Running modern LLMs like Phi-4 or Qwen3 with a 16,000 token context window usually requires 8GB&#43; of VRAM. On an entry-level NVIDIA T500, the system often spills over to the CPU, slowing performance from 40&#43; tokens/sec to a crawl.
+The “Golden Fix”: 4-Bit KV Caching By shifting the context memory to 4-bit quantization, we can fit a massive context window into just 3GB of VRAM, leaving room for the model weights.
 ...</p>
   </div>
-  <a class="entry-link" aria-label="post link to Privacy-First AI: Running Llama 3.2 Locally with Ollama" href="http://localhost:1313/posts/ollama/"></a>
+  <a class="entry-link" aria-label="post link to Running OpenClaw 2026 on a 4GB Laptop GPU" href="http://localhost:1313/posts/openclaw-t500-setup/"></a>
+</article><article class="post-entry">
+  <header class="entry-header">
+    <h2>Privacy-First AI: Running Ollama</h2>
+  </header>
+  <div class="entry-content">
+    <p>Why Run AI Locally? Ollama allows you to run Large Language Models (LLMs) directly on your desktop. While cloud solutions like ChatGPT or Gemini offer massive horsepower, they require you to send your data to external servers.
+Running a local LLM provides:
+Data Sovereignty: Your prompts and data never leave your machine. Zero Cost: No monthly subscriptions or API usage fees. Offline Access: Work without an internet connection. Security: Ideal for analyzing sensitive documents or private codebases. ...</p>
+  </div>
+  <a class="entry-link" aria-label="post link to Privacy-First AI: Running Ollama" href="http://localhost:1313/posts/ollama/"></a>
 </article>
     </main>
     

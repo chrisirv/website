@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>AI on Deft Technology</title>
-    <link>http://localhost:1313/tags/ai/</link>
-    <description>Recent content in AI on Deft Technology</description>
+    <title>Self-Hosted on Deft Technology</title>
+    <link>http://localhost:1313/tags/self-hosted/</link>
+    <description>Recent content in Self-Hosted on Deft Technology</description>
     <generator>Hugo -- 0.154.4</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 25 Feb 2026 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/tags/self-hosted/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Running OpenClaw 2026 on a 4GB Laptop GPU</title>
       <link>http://localhost:1313/posts/openclaw-t500-setup/</link>
       <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/openclaw-t500-setup/</guid>
       <description>How to optimize Ollama and OpenClaw for entry-level workstation GPUs like the NVIDIA T500.</description>
-    </item>
-    <item>
-      <title>Privacy-First AI: Running Ollama</title>
-      <link>http://localhost:1313/posts/ollama/</link>
-      <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/ollama/</guid>
-      <description>How to use Ollama and Llama 3.2 on an M1 Mac for private, secure, and free AI.</description>
     </item>
   </channel>
 </rss>

@@ -175,6 +175,16 @@
     </footer>
 </article><article class="post-entry">
   <header class="entry-header">
+    <h2>Running OpenClaw 2026 on a 4GB Laptop GPU</h2>
+  </header>
+  <div class="entry-content">
+    <p>The Challenge: The 4GB VRAM Wall Running modern LLMs like Phi-4 or Qwen3 with a 16,000 token context window usually requires 8GB&#43; of VRAM. On an entry-level NVIDIA T500, the system often spills over to the CPU, slowing performance from 40&#43; tokens/sec to a crawl.
+The “Golden Fix”: 4-Bit KV Caching By shifting the context memory to 4-bit quantization, we can fit a massive context window into just 3GB of VRAM, leaving room for the model weights.
+...</p>
+  </div>
+  <a class="entry-link" aria-label="post link to Running OpenClaw 2026 on a 4GB Laptop GPU" href="http://localhost:1313/posts/openclaw-t500-setup/"></a>
+</article><article class="post-entry">
+  <header class="entry-header">
     <h2>Privacy-First AI: Running Ollama</h2>
   </header>
   <div class="entry-content">
@@ -212,15 +222,6 @@ Global Anycast Network: Your DNS records are replicated across 330&#43; cities f
 ...</p>
   </div>
   <a class="entry-link" aria-label="post link to DNS Hosting using Cloudflare" href="http://localhost:1313/posts/dns/"></a>
-</article><article class="post-entry">
-  <header class="entry-header">
-    <h2>Website Hosting using Render</h2>
-  </header>
-  <div class="entry-content">
-    <p>What is Render? Render https://www.render.com is a good choice for hosting static sites like this one. The Free Hobby Plan: The Hobby plan is free ($0/month) and includes several useful features:
-Custom domains: Use your own brand. Global CDN: Fast delivery worldwide. Automatic SSL: Secure by default. Continuous deployment: Updates automatically on each GitHub push. How to get started: Create a GitHub repository and push your Hugo project. Create a new Static Site on Render and connect the repository. Set the Build Command to hugo. Set the Publish Directory to public. Add a custom domain if desired. ...</p>
-  </div>
-  <a class="entry-link" aria-label="post link to Website Hosting using Render" href="http://localhost:1313/posts/websitehosting/"></a>
 </article>
     </main>
     

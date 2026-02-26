@@ -6,10 +6,17 @@
     <description>Recent content in Ollama on Deft Technology</description>
     <generator>Hugo -- 0.154.4</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 01 Feb 2026 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 25 Feb 2026 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/ollama/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Privacy-First AI: Running Llama 3.2 Locally with Ollama</title>
+      <title>Running OpenClaw 2026 on a 4GB Laptop GPU</title>
+      <link>http://localhost:1313/posts/openclaw-t500-setup/</link>
+      <pubDate>Wed, 25 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/posts/openclaw-t500-setup/</guid>
+      <description>How to optimize Ollama and OpenClaw for entry-level workstation GPUs like the NVIDIA T500.</description>
+    </item>
+    <item>
+      <title>Privacy-First AI: Running Ollama</title>
       <link>http://localhost:1313/posts/ollama/</link>
       <pubDate>Sun, 01 Feb 2026 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/ollama/</guid>

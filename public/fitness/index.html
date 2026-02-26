@@ -190,55 +190,67 @@
 <div class="post-content"><p>This page pulls data directly from the <!-- raw HTML omitted -->Strava API<!-- raw HTML omitted -->.  Every few hours, a <!-- raw HTML omitted -->GitHub Action<!-- raw HTML omitted --> wakes up, grabs any updates, and saves them to a data file. <!-- raw HTML omitted -->Hugo<!-- raw HTML omitted --> then does any converting and using <!-- raw HTML omitted -->Leaflet.js<!-- raw HTML omitted --> plots my last starting point on a map.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-top: 2.5rem; margin-bottom: 2.5rem;"><div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
             <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em;">🏃 YTD Run</div>
-            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">74.7 mi</div>
+            <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">90.6 mi</div>
         </div><div style="background: var(--tertiary); padding: 20px; border-radius: 8px; border: 1px solid var(--border);">
             <div style="font-size: 0.75rem; opacity: 0.7; text-transform: uppercase; letter-spacing: 0.05em;">🚲 YTD Ride</div>
             <div style="font-size: 1.5rem; font-weight: bold; margin-top: 5px;">26.2 mi</div>
-        </div></div><div class="recent-activities">
+        </div></div><h3 style="margin-bottom: 1rem;">📍 Last Starting Location</h3>
+        <div id="map" style="height: 300px; border-radius: 12px; margin-bottom: 2.5rem; border: 1px solid var(--border); z-index: 1;"></div>
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                
+                const lat =  44.944267 ;
+                const lng =  -85.1763 ;
+                const activityName = "Spikes and fun in the sun";
+
+                
+                const map = L.map('map').setView([lat, lng], 7);
+
+                
+                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                    attribution: '© OpenStreetMap contributors'
+                }).addTo(map);
+
+                
+                L.marker([lat, lng]).addTo(map)
+                    .bindPopup(`<b>Last Activity:</b><br>${activityName}`)
+                    .openPopup();
+            });
+        </script><div class="recent-activities">
         <h3 style="margin-bottom: 1.5rem; border-bottom: 1px solid var(--border); padding-bottom: 10px;">Recent Activities</h3><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
             
             <div style="flex-grow: 1;">
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.2rem;">🏃</span>
-                    <strong style="font-size: 1.1rem;">2% of goal️ completed! - Oura</strong>
+                    <strong style="font-size: 1.1rem;">Spikes and fun in the sun</strong>
                 </div>
             
-                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Tue, Jan 27• Run• 34m</div>
+                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Sat, Jan 31• Run• 1h 3m</div>
 
             </div>
 
             <div style="text-align: right;">
-                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">--</div></div>
-        </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
-            
-            <div style="flex-grow: 1;">
-                <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1.2rem;">🏃</span>
-                    <strong style="font-size: 1.1rem;">Snow run</strong>
-                </div>
-            
-                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Sun, Jan 25• Run• 48m</div>
-
-            </div>
-
-            <div style="text-align: right;">
-                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">5.08 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
-                    ▲ 172 ft
+                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">7.10 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
+                    ▲ 619 ft
                 </div></div>
         </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
             
             <div style="flex-grow: 1;">
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.2rem;">🏃</span>
-                    <strong style="font-size: 1.1rem;">3 out wore the gortex shoes</strong>
+                    <strong style="font-size: 1.1rem;">Brrrr</strong>
                 </div>
             
-                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Sat, Jan 24• Run• 44m</div>
+                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Fri, Jan 30• Run• 40m</div>
 
             </div>
 
             <div style="text-align: right;">
-                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">4.41 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
+                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">4.38 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
                     ▲ 262 ft
                 </div></div>
         </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
@@ -246,10 +258,26 @@
             <div style="flex-grow: 1;">
                 <div style="display: flex; align-items: center; gap: 10px;">
                     <span style="font-size: 1.2rem;">🏃</span>
-                    <strong style="font-size: 1.1rem;">47% of goal️ completed! - Oura</strong>
+                    <strong style="font-size: 1.1rem;">Back outside</strong>
                 </div>
             
-                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Fri, Jan 23• Run• 30m</div>
+                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Thu, Jan 29• Run• 41m</div>
+
+            </div>
+
+            <div style="text-align: right;">
+                <div style="font-family: monospace; font-weight: bold; font-size: 1.1rem; color: var(--secondary);">4.40 mi</div><div style="font-size: 0.75rem; opacity: 0.6;">
+                    ▲ 261 ft
+                </div></div>
+        </div><div style="display: flex; justify-content: space-between; align-items: center; padding: 15px 0; border-bottom: 1px solid var(--border);">
+            
+            <div style="flex-grow: 1;">
+                <div style="display: flex; align-items: center; gap: 10px;">
+                    <span style="font-size: 1.2rem;">🚲</span>
+                    <strong style="font-size: 1.1rem;">Hamster wheel</strong>
+                </div>
+            
+                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Wed, Jan 28• Ride• 1h 1m</div>
 
             </div>
 
@@ -259,11 +287,11 @@
             
             <div style="flex-grow: 1;">
                 <div style="display: flex; align-items: center; gap: 10px;">
-                    <span style="font-size: 1.2rem;">🚲</span>
-                    <strong style="font-size: 1.1rem;">Inside spin</strong>
+                    <span style="font-size: 1.2rem;">🏃</span>
+                    <strong style="font-size: 1.1rem;">Dreadmill</strong>
                 </div>
             
-                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Thu, Jan 22• Ride• 60m</div>
+                <div style="font-size: 0.85rem; opacity: 0.7; margin-top: 4px;">Tue, Jan 27• Run• 34m</div>
 
             </div>
 
