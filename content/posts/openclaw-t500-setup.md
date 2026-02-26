@@ -2,37 +2,50 @@
 title: "Running OpenClaw 2026 on a 4GB Laptop GPU"
 date: 2026-02-25
 draft: false
-description: "How to optimize Ollama and OpenClaw for entry-level workstation GPUs like the NVIDIA T500."
-tags: ["Ollama", "OpenClaw", "NVIDIA", "AI", "Self-Hosted"]
+description: "Optimizing Ollama and OpenClaw for entry-level workstation GPUs like the NVIDIA T500 on Ubuntu."
+tags: ["Ollama", "OpenClaw", "NVIDIA", "Ubuntu", "Self-Hosted"]
 ---
 
 ### The Challenge: The 4GB VRAM Wall
 
-Running modern LLMs like **Phi-4** or **Qwen3** with a **16,000 token context window** usually requires 8GB+ of VRAM. On an entry-level **NVIDIA T500**, the system often spills over to the CPU, slowing performance from 40+ tokens/sec to a crawl.
+Running modern LLMs like **Phi-4** or **Qwen3** on local hardware is becoming a necessity as **cloud AI costs continue to add up** for power users. However, **OpenClaw 2026 now requires a large context window** (minimum 12k-16k) to handle its agentic workflows and tool-calling capabilities.
+
+On an entry-level **NVIDIA T500 (4GB)**, these large windows usually force the system to spill over into System RAM (CPU mode). When this happens, generation speed drops from near-instant to **minutes per response**, making the bot feel sluggish and unresponsive.
 
 #### The "Golden Fix": 4-Bit KV Caching
 
-By shifting the context memory to 4-bit quantization, we can fit a massive context window into just 3GB of VRAM, leaving room for the model weights.
+By shifting the context memory (KV Cache) to 4-bit quantization, we can squeeze that massive 16,000 token window into just ~3GB of VRAM, leaving enough room for the model weights to stay on the GPU.
 
-- **Speed Increase:** Up to 5x faster response times.
+- **Speed Increase:** Returns generation from minutes back to seconds.
 - **Efficiency:** Maintains 100% GPU utilization.
-- **Context:** Safely handles 12k-16k windows on small cards.
+- **Context:** Safely handles the 12k-16k windows required by OpenClaw 2026.
 
-### How to set it up:
+### Installation & Setup (Linux/Ubuntu)
 
-1. **Configure Ollama:** Edit your system service (`sudo systemctl edit ollama.service`) and add:
-   `Environment="OLLAMA_KV_CACHE_TYPE=q4_0"`
-2. **Enable Flash Attention:** Ensure `OLLAMA_FLASH_ATTENTION=1` is also in your environment variables.
-3. **Create a Custom Modelfile:** Set `num_ctx 12000` and `num_batch 128` to prevent GPU "pegging" during long fetches.
-4. **Deploy OpenClaw:** Connect your gateway to the custom Ollama model.
+To get started on **Ubuntu**, install the core components at these locations:
+
+1.  **Ollama:** Install via the official binary to `/usr/local/bin/ollama` using:
+    `curl -fsSL https://ollama.com/install.sh | sh`
+2.  **OpenClaw:** Deploy the gateway (typically in `/usr/local/bin/openclaw` or your Go bin path) and initialize your config in `~/.openclaw/`.
+
+### Optimization Steps:
+
+1.  **Configure Ollama Service:** Edit your systemd file (`sudo systemctl edit ollama.service`) and add:
+    ```ini
+    [Service]
+    Environment="OLLAMA_KV_CACHE_TYPE=q4_0"
+    Environment="OLLAMA_FLASH_ATTENTION=1"
+    ```
+2.  **Create a Stable Modelfile:** Use a custom Modelfile to set `num_ctx 12000` and `num_batch 128`. This prevents the GPU from "pegging" (freezing) during long web-fetches.
+3.  **Monitor Performance:** Use **nvidia-smi** or **nvtop** in your terminal to review performance. These tools are essential to ensure your VRAM usage stays under the 4096MiB limit.
 
 ---
 
 ### Prompt for others to set up their own environment:
 
-If you want to help a friend (or another AI) replicate this exact stable environment, use this prompt:
+Copy and paste this prompt into a LLM to get a step-by-step technical walkthrough:
 
 ```text
-Act as a Senior AI Infrastructure Engineer. Guide me through setting up an OpenClaw 2026 gateway connected to a local Ollama instance on a Linux laptop with only 4GB of VRAM (NVIDIA T500). 
+Act as a Senior AI Infrastructure Engineer. Guide me through setting up an OpenClaw 2026 gateway connected to a local Ollama instance on Ubuntu Linux (NVIDIA T500 4GB). 
 
-Specifically, provide the systemd configuration for Ollama to enable 'q4_0' KV caching and Flash Attention. Then, write a Modelfile for 'Qwen3:4b' that sets a 12,000 token context window and a reduced 'num_batch' of 128 to ensure the GPU doesn't crash during web-fetch operations. Finally, list the 'openclaw config' commands to link the primary agent to this new model.
+Explain how to avoid the 'speed in the minutes' bottleneck by configuring the 'q4_0' KV cache in systemd. Provide a Modelfile for 'Qwen3:4b' with a 12,000 context window and reduced batch size. Finally, show me how to use nvidia-smi and nvtop to verify that the model is not spilling over into CPU RAM.
