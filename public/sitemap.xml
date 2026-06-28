@@ -3,30 +3,39 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://localhost:1313/tags/ai/</loc>
-    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/tags/nvidia/</loc>
-    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
+    <loc>http://localhost:1313/tags/docker/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/local-ai-stack/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/ollama/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/posts/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/self-hosted/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/ubuntu/</loc>
+    <lastmod>2026-06-27T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/tags/nvidia/</loc>
     <lastmod>2026-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/openclaw/</loc>
     <lastmod>2026-02-25T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://localhost:1313/posts/openclaw-t500-setup/</loc>
-    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/self-hosted/</loc>
-    <lastmod>2026-02-25T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/tags/</loc>
     <lastmod>2026-02-25T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/tags/llama3.2/</loc>
