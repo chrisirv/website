@@ -5,7 +5,7 @@ theme = 'PaperMod'
 
 # The new way to limit posts per page (Hugo v0.128.0+)
 [pagination]
-    pagerSize = 5
+    pagerSize = 10
 
 [params]
     env = 'production'
